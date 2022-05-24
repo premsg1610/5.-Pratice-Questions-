@@ -1,5 +1,7 @@
 package com.D5_Q1;
 
+import java.util.Scanner;
+
 public class Employee {
 
 	private int employeeId;
@@ -9,8 +11,13 @@ public class Employee {
 	
 	public void calculateNetSalary(int pfpercentage) {
 		
+		netSalary = salary - (salary * pfpercentage/100);
+		setNetSalary(netSalary);
 	}
 	
+	public Employee() {
+		
+	}
 	
 	
 	public int getEmployeeId() {
@@ -37,6 +44,8 @@ public class Employee {
 		this.salary = salary;
 	}
 
+	
+	
 	public double getNetSalary() {
 		return netSalary;
 	}
@@ -46,14 +55,5 @@ public class Employee {
 	}
 
 	
-	public static Employee getEmployeeDetails() {
-		
-		Employee e1 = new Employee();
-		e1.employeeId = e1.getEmployeeId();
-		e1.employeeName = e1.getEmployeeName();
-		e1.salary = e1.getSalary();
-		
-//		System.out.println(e1.employeeId);
-		return e1;
-	}
+	
 }
